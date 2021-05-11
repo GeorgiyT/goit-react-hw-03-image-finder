@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class Searchbar extends Component {
   state = {
     inputValue: ""
+  };
+
+  static propTypes = {
+    setQuery: PropTypes.func.isRequired
   };
 
   handleChange = e => {
