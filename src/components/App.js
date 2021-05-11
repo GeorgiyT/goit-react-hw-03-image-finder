@@ -66,8 +66,10 @@ class App extends React.Component {
   };
 
   closeModal = e => {
-    if (e.target === e.currentTarget || e.code === "Escape") this.setState({ modalUrl: "", openModal: false });
-    window.removeEventListener("keydown", this.closeModal);
+    if (e.target === e.currentTarget || e.code === "Escape") {
+      this.setState({ modalUrl: "", openModal: false });
+      window.removeEventListener("keydown", this.closeModal);
+    }
   };
 
   render() {
